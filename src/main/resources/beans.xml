@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+        
+
+    <!-- bean definitions here -->
+    <context:annotation-config></context:annotation-config>
+     <bean id="sim" class="com.spring.Airtel"></bean>
+     <bean  id="student" class="com.spring.Students" >
+     <constructor-arg name="id" value="100"></constructor-arg>
+     <constructor-arg name="name" value="nani"></constructor-arg>
+     <constructor-arg name="marks" value="86"></constructor-arg>
+     <property name="hobbies">
+     <list>
+     <value>cricket</value>
+     <value> wathcing tv</value>
+     <value>reading books</value>
+     
+     </list>
+     </property>
+     <property name="mark">
+     <map>
+     <entry key="telugu" value="90"></entry>
+      <entry key="maths" value="80"></entry>
+       <entry key="english" value="92"></entry>
+     </map>
+     </property>
+     <property name="adressmap">
+     <map>
+     <entry key="present" value-ref="adress2"></entry>
+     <entry key="fast" value-ref="adress"></entry>
+     </map>
+     
+     
+     </property>
+     </bean>
+     <bean id="adress" class="com.spring.Adress">
+     <property name="street" value="kommulavaripalem"></property>
+     </bean>
+     
+ 
+     <bean id="adress2" class="com.spring.Adress">
+    <property name="street" value="giduguvaripalem"></property>
+     
+     </bean>
+     
+     <bean id="adress3" class="com.spring.Adress">
+    <property name="street" value="giduguvaripalem"></property>
+     
+     </bean>
+     
+    
+
+</beans>
